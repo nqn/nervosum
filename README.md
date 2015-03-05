@@ -5,8 +5,14 @@ A distributed system nervous system.
 consistency : weak (try once), strong(ack-loops through in-memory, local persist or remote through replication)
 receivers : pid0, ..., pidN
 
-send(receivers, consistency, message)
-recv<MessageType>()
+http://node/send/
+{
+ receivers,
+ consistency,
+ message
+}
+
+http://node/recv/MessageType
 ```
 
 ### Goals
@@ -15,6 +21,8 @@ recv<MessageType>()
  - Simple APIs
  - Test driven
  - Metrics driven
+ - Launch through dynamic topologies
+ - Interfaces are _only_ HTTP
 
 ### Terminology
 

@@ -5,14 +5,22 @@ A distributed system nervous system.
 consistency : weak (try once), strong(ack-loops through in-memory, local persist or remote through replication), ordering (in-order, out of order)
 receivers : pid0, ..., pidN
 
-http://node/send/
+http POST http://node/send/
 {
  receivers,
  consistency,
  message
 }
 
-http://node/recv/MessageType
+http GET http://node/recv/MessageType
+{
+  uuid: XXYYZZ
+}
+
+http POST http://node/ack/
+{
+  uuid: XXYYZZ
+}
 ```
 
 ### Goals

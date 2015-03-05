@@ -6,4 +6,5 @@ consistency : weak (try once), strong(ack-loops through in-memory, local persist
 receivers : pid0, ..., pidN
 
 send(receivers, consistency, message)
+recv<MessageType>()
 ```

@@ -2,7 +2,7 @@
 A distributed system nervous system.
 
 ```
-consistency : weak (try once), strong(ack-loops through in-memory, local persist or remote through replication)
+consistency : weak (try once), strong(ack-loops through in-memory, local persist or remote through replication), ordering (in-order, out of order)
 receivers : pid0, ..., pidN
 
 http://node/send/
